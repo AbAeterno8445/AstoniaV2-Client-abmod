@@ -869,19 +869,18 @@ void mouse_mapbox(int x,int y,int state)
         if (mx<(dist_diff+3)*32+12 || mx>(screen_renderdist-dist_diff-view_subedges-3)*32+20 || my<(dist_diff+view_subedges+3)*32+12 || my>(screen_renderdist-dist_diff-3)*32+20) {
 			// Clicking auto-walk buttons
 			if (state==MS_LB_UP) {
-				xlog(1, "mx=%d my=%d targetx=%d targety=%d dist=%d", xr, yr, xwalk_ex, xwalk_ey, (int)sqrt(pow(xr-xwalk_ex,2)+pow(yr-xwalk_ey,2)));
 				if ((int)sqrt(pow(xr-xwalk_nx,2)+pow(yr-xwalk_ny,2)) < 12) {
 					// North
-					xlog(1, "1");
+					xmove=1;
 				} else if ((int)sqrt(pow(xr-xwalk_wx,2)+pow(yr-xwalk_wy,2)) < 12) {
 					// West
-					xlog(1, "2");
+					xmove=2;
 				} else if ((int)sqrt(pow(xr-xwalk_sx,2)+pow(yr-xwalk_sy,2) < 12)) {
 					// South
-					xlog(1, "3");
+					xmove=3;
 				} else if ((int)sqrt(pow(xr-xwalk_ex,2)+pow(yr-xwalk_ey,2) < 12)) {
 					// East
-					xlog(1, "4");
+					xmove=4;
 				}
 
 				/*mx/=32; my/=32;

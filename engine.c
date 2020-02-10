@@ -2091,10 +2091,10 @@ void engine(void)
 
 		if (xmove && xtimer<1) {
 			switch (xmove) {
-				case  1:     cmds(CL_CMD_MOVE,map[10+screen_renderdist*17].x,map[10+screen_renderdist*17].y); break;
-				case  3:     cmds(CL_CMD_MOVE,map[24+screen_renderdist*17].x,map[24+screen_renderdist*17].y); break;
-				case  2:     cmds(CL_CMD_MOVE,map[17+screen_renderdist*10].x,map[17+screen_renderdist*10].y); break;
-				case  4:     cmds(CL_CMD_MOVE,map[17+screen_renderdist*24].x,map[17+screen_renderdist*24].y); break;
+				case  1:     cmds(CL_CMD_MOVE,map[(RENDERDIST/2-7)+screen_renderdist*RENDERDIST/2].x,map[(RENDERDIST/2-7)+screen_renderdist*RENDERDIST/2].y); break;
+				case  3:     cmds(CL_CMD_MOVE,map[(RENDERDIST/2+7)+screen_renderdist*RENDERDIST/2].x,map[(RENDERDIST/2+7)+screen_renderdist*RENDERDIST/2].y); break;
+				case  2:     cmds(CL_CMD_MOVE,map[RENDERDIST/2+screen_renderdist*(RENDERDIST/2-7)].x,map[RENDERDIST/2+screen_renderdist*(RENDERDIST/2-7)].y); break;
+				case  4:     cmds(CL_CMD_MOVE,map[RENDERDIST/2+screen_renderdist*(RENDERDIST/2+7)].x,map[RENDERDIST/2+screen_renderdist*(RENDERDIST/2+7)].y); break;
 			}
 			xtimer=4;
 		}

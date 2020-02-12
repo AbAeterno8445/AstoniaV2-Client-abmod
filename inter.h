@@ -69,9 +69,9 @@
 #define XWALK_WY_1600		747
 
 // GUI overlay sprite number, based on resolution
-#define GUI_OVERLAY_800		10
-#define GUI_OVERLAY_1280	11
-#define GUI_OVERLAY_1600	12
+#define GUI_OVERLAY_800		100
+#define GUI_OVERLAY_1280	101
+#define GUI_OVERLAY_1600	102
 
 // Offsets from screen width/screen height for positioning GUI elements
 #define GUI_QSPELLS_XOFF	198  // Spells quickbar

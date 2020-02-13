@@ -5,7 +5,7 @@
 
 //#define DOCONVERT	// enable sprite packer
 
-#define TICKS			18
+#define TICKS			36
 
 // wear positions
 #define WN_HEAD		0
